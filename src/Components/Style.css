@@ -1,0 +1,322 @@
+.dropdown-menu {
+  transform: translateX(1%);
+  transition: all 0.3s ease;
+}
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+/* .dropdo{
+    margin-left: 150px;
+} */
+.dropdo{
+    margin-left: 330px;
+}
+.drop{
+    margin-left: 30px;
+}
+
+.unstiched{
+    width: 550px;
+    /* margin-left: 300px; */
+    margin-top: 80px;
+}
+
+
+/* Background overlay for blur effect */
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  backdrop-filter: blur(5px); /* Blur effect */
+  z-index: 998; /* Positioned below the search bar */
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none; /* Ensure the overlay doesn't block clicks */
+}
+
+.background-overlay.open {
+  opacity: 1;
+  pointer-events: auto; /* Allow interactions when the overlay is visible */
+}
+
+/* Search Bar Styles */
+.search-bar {
+  position: fixed;
+  top: -50%; /* Initially hide the search bar above the screen */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  width: 90%; /* Adjust width as needed */
+  max-width: 600px; /* Limit maximum width */
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 999; /* Ensure the search bar is above the overlay */
+  transition: top 0.3s ease; /* Animation for sliding in and out */
+}
+
+.search-bar.open {
+  top: 50%; /* Move to the center of the screen vertically */
+  transform: translate(-50%, -50%); /* Adjust to center both horizontally and vertically */
+}
+
+.search-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-bar-content input {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.search-bar-content button {
+  flex-shrink: 0;
+}
+
+/* Navbar container */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Logo centered on desktop */
+.navbar-logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Menu on the left side */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+}
+
+/* Icons on the right side */
+.navbar-icons {
+  display: flex;
+  align-items: center;
+}
+
+/* Move logo before the toggle button on mobile */
+@media (max-width: 991px) {
+  .navbar-container {
+    flex-direction: column;
+    display: contents !important;
+  }
+  .listof>li{
+    text-align: center;
+  }
+
+  .navbar-logo {
+    order: -1; /* Move the logo before the toggle button */
+    position: relative;
+    left: auto;
+    transform: none;
+    margin-bottom: 10px;
+    
+  }
+.logomain{
+  width: 300px;
+}
+  
+
+  .navbar-icons {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Background Overlay */
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1040;
+}
+
+.background-overlay.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Sliding Search Bar */
+.search-bar {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 400px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1050;
+}
+
+.search-bar.open {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.search-bar-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.search-bar input {
+  border-radius: 4px;
+}
+
+.search-bar button {
+  border-radius: 4px;
+}
+
+
+@media screen and (max-width :478px ) {
+
+.unstiched{
+    width: 350px;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+.kurti{
+    width: 350px;
+    margin-left: 10px;
+    margin-top: 0px;
+}
+.kurti1{
+    width: 350px;
+    margin-left: 10px;
+    margin-top: 0px;
+}
+}
+
+.navbar-brand-container {
+  order: 2; /* Place the logo before the menu */
+}
+
+.menu-container {
+  order: 1;
+}
+
+/* Styles for desktop screens */
+@media (min-width: 992px) {
+  .navbar-brand-container {
+    order: 1; /* Place the logo after the menu */
+  }
+
+  .menu-container {
+    order: -1;
+  }
+}
+/* ---------button------ */
+/* ButtonStyles.css */
+.fabric-button {
+  background-color: white;
+  border: 2px solid #007BFF;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-family: 'Raleway';
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 80%;
+  transition: all 0.3s ease;
+}
+
+.fabric-button:hover {
+  background-color: #007BFF;
+  color: white;
+  border-color: #0056b3;
+}
+
+.fabric-button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+/* Modern Design for Product Cards */
+
+.container {
+  max-width: 1200px;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  border-radius: 12px 12px 0 0;
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-body {
+  padding: 16px;
+  text-align: center;
+}
+
+.product-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.ratings {
+  margin-bottom: 12px;
+}
+
+.rating-color {
+  color: #f39c12; /* Gold color for stars */
+}
+
+.product-price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #e74c3c; /* Soft red color for price */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  .product-image {
+    height: 150px;
+  }
+
+  .product-card {
+    margin-bottom: 24px;
+  }
+}
